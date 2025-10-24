@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vehicles",
+  "info": {
+    "singularName": "vehicle",
+    "pluralName": "vehicles",
+    "displayName": "Vehicle"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vin": {
+      "type": "string"
+    },
+    "plate": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "color": {
+      "type": "string"
+    },
+    "models": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::model.model",
+      "mappedBy": "vehicles"
+    }
+  }
+}
